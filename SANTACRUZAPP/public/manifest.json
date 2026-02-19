@@ -3,7 +3,7 @@
   "short_name": "Santa Cruz",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#DC3977",
+  "background_color": "#ffffff",
   "theme_color": "#DC3977",
   "orientation": "portrait",
   "icons": [
