@@ -8,7 +8,7 @@
     <title>Santa Cruz - Portal Acadêmico</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -48,15 +48,10 @@
   <script type="module" src="./index.tsx"></script>
 <script>
   if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-      navigator.serviceWorker.register("./sw.js")
-        .then(function () {
-          console.log("Service Worker registrado com sucesso!");
-        })
-        .catch(function (error) {
-          console.log("Erro ao registrar SW:", error);
-        });
-    });
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then(() => console.log("SW registrado"))
+      .catch((err) => console.log("Erro ao registrar SW:", err));
   }
 </script>
 </body>
